@@ -2,15 +2,7 @@ version: 0.0
 os: ubuntu
 
 files:
-  - source: /
-    destination: /home/ubuntu
-
-permissions: 
-  - object: /
-    pattern: "**"
-    owner: www-data
-    group: www-data
-
+ - source: /
 hooks:
 
   Beforeinstall:

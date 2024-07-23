@@ -1,14 +1,17 @@
 #!/bin/bash
 # after install file
 
-cd /home/ubuntu
 
-# remove old build and node modules folders
+app_dir="/var/www/html/admin"
+current_dir="/opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_ID/$DEPLOYMENT_ID/deployment-archive"
 
-rm -rf node_modules
-rm -rf build
+cd "$current_dir"
 
-# install the dependancies and create build folder
+sudo chown -R ubuntu:ubuntu "$current_dir"
 
-npm install
-npm run build
+
+if [ -L "$app_dir" ]; then
+    sudo unlink "$app_dir"
+fi
+
+sudo ln -s "$current_dir" "$app_dir"
