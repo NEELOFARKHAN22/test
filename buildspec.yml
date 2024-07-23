@@ -15,9 +15,4 @@ phases:
 artifacts:
   # include  all the files required to run application
   files:
-    - public/**/*
-    - scr/**/*
-    - package.json
-    - appspec.yml
-    - scripts/**/*
-    - package-lock.json
+    -  '**/*'
