@@ -6,5 +6,5 @@ hooks:
 
   AfterInstall:
     - location: scripts/after_install.sh
-       runas: root
+       runas: ubuntu
 
