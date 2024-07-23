@@ -18,6 +18,6 @@ artifacts:
     - public/**/*
     - scr/**/*
     - package.json
-    - server.js
     - appspec.yml
     - scripts/**/*
+    - package-lock.json
