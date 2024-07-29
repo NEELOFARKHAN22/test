@@ -7,7 +7,7 @@ current_dir="/opt/codedeploy-agent/deployment-root/$DEPLOYMENT_GROUP_ID/$DEPLOYM
 
 cd "$current_dir"
 
-sudo chown -R ubuntu:ubuntu "$current_dir"
+sudo chown -R www-data:www-data "$current_dir"
 
 
 if [ -L "$app_dir" ]; then
